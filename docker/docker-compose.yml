@@ -1,0 +1,10 @@
+discovery:
+  image: qbahn/discovery-microservice
+  ports:
+   - "8761:8761"
+configserver:
+  image: qbahn/configuration-microservice
+  ports:
+   - "8888:8888"
+  links:
+   - discovery
