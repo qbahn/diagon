@@ -6,5 +6,14 @@ configserver:
   image: qbahn/configuration-microservice
   ports:
    - "8888:8888"
+   - "5005:5005"
   links:
    - discovery
+users:
+  image: qbahn/users-microservice
+  ports:
+    - "9000:9000"
+    - "5006:5006"
+  links:
+    - discovery
+    - configserver
