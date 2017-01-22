@@ -70,7 +70,6 @@ void measureCommand(char what, WifiData client) {
   int chk = DHT11.read(DHT11PIN);   
   String sensorStatus;  
   
-  Wifi.print(F("Sensor state: "));
   switch (chk)
   {
     case DHTLIB_OK: 
