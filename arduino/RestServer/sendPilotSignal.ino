@@ -1,6 +1,6 @@
 
 void sendPilotSignal(int buttonNr, int buttonValue, WifiData client) {  
-  String WrongMode = "Incorrect buttonMode";
+  String WrongMode = F("Incorrect buttonMode");
 
   if (buttonNr == 1) {
     if  (buttonValue == 0) {
@@ -50,4 +50,6 @@ void sendPilotSignal(int buttonNr, int buttonValue, WifiData client) {
    sendAnswear(F("Wrong nr."),client); 
   }
 }
+
+
 
